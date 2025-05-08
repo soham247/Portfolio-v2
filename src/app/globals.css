@@ -2,20 +2,109 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Light mode - bluish/pinkish colors */
+    --background: #e8e8ff;
+    --foreground: #1a1a3a;
+    --card: #ffffff;
+    --card-foreground: #1a1a3a;
+    --popover: #ffffff;
+    --popover-foreground: #1a1a3a;
+    --primary: #fd9a00;
+    --primary-foreground: #ffffff;
+    --secondary: #d8b4fe;
+    --secondary-foreground: #1a1a3a;
+    --muted: #f1f1ff;
+    --muted-foreground: #6c6c8a;
+    --accent: #3B82F6;
+    --accent-foreground: #1a1a3a;
+    --destructive: #ff5e7a;
+    --destructive-foreground: #ffffff;
+    --border: #e2e2f0;
+    --input: #e2e2f0;
+    --ring: #6366f1;
+    --particle: #000000
+
+    /* Space-themed chart colors */
+    --chart-1: #6366f1;
+    --chart-2: #38bdf8;
+    --chart-3: #9333ea;
+    --chart-4: #f472b6;
+    --chart-5: #3b82f6;
+
+    --radius: 0.5rem
+  }
+
+  .dark {
+    /* Dark mode - deep space colors */
+    --background: #0a0621;
+    --foreground: #f0f0ff;
+    --card: #1a1037;
+    --card-foreground: #f0f0ff;
+    --popover: #1a1037;
+    --popover-foreground: #f0f0ff;
+    --primary: #8b5cf6;
+    --primary-foreground: #ffffff;
+    --secondary: #3b0764;
+    --secondary-foreground: #f0f0ff;
+    --muted: #261c4d;
+    --muted-foreground: #bab8d0;
+    --accent: #F59E0B;
+    --accent-foreground: #f0f0ff;
+    --destructive: #e11d48;
+    --destructive-foreground: #f0f0ff;
+    --border: #2e1a65;
+    --input: #2e1a65;
+    --ring: #8b5cf6;
+    --particle: #ffffff;
+
+    /* Space-themed chart colors */
+    --chart-1: #8b5cf6;
+    --chart-2: #0ea5e9;
+    --chart-3: #c026d3;
+    --chart-4: #ec4899;
+    --chart-5: #6366f1;
+  }
+  .theme {
+    --animate-marquee: marquee var(--duration) infinite linear;
+    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@theme inline {
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }
