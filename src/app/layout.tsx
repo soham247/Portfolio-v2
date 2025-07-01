@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/navbar/theme/theme-provider";
 import { Suspense } from "react";
 import Loading from "./loading";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -60,7 +61,10 @@ export default function RootLayout({
         >
           <Navbar />
           <Suspense fallback={<Loading />}>
-            <div className="pt-10">{children}</div>
+            <div className="pt-10">
+              {children}
+              <Analytics />
+            </div>
           </Suspense>
           <Footer />
         </ThemeProvider>
