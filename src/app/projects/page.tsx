@@ -15,6 +15,7 @@ import portfolio from "../../../public/projects/portfolio.png";
 import muse from "../../../public/projects/Muse.png";
 import jeevanVerse from "../../../public/projects/jeevanverse.png"
 import spendingDiary from "../../../public/projects/spending-diary.png";
+import learntrix from "../../../public/projects/learntrix.png";
 import { Project } from "@/types/project";
 
 // Project card component
@@ -103,6 +104,14 @@ function ProjectsSection() {
         description: "Find symptoms, request blood, join discussions, and support health campaigns—all in one place. ",
         liveLink: "https://jeevan-verse.vercel.app/",
         gitHubLink: "https://github.com/Dutta2005/Jeevan-verse"
+    },
+    {
+        image: learntrix,
+        name: "Learntrix AI",
+        technologies: ["Next.js", "FastAPI", "Gemini", "Supabase"],
+        description: "Transform YouTube videos and PDF documents into interactive flashcards, responsive quizzes, and intelligent chat assistants.",
+        liveLink: "https://learntrix-ai.vercel.app/",
+        gitHubLink: "https://github.com/soham247/learntrix-ai"
     },
     {
       image: spendingDiary,

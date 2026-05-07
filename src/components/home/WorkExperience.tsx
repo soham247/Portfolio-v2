@@ -205,7 +205,7 @@ function WorkExperience() {
                   <div className="flex items-center gap-2">
                     <Calendar className={`w-4 h-4 ${accentColor}`} />
                     <span className={`text-sm ${resolvedTheme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
-                      May 2024 - Present
+                      May 2025 - July 2025
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -217,11 +217,10 @@ function WorkExperience() {
                 </div>
 
                 {/* Description */}
-                <p className={`text-base leading-relaxed mb-6 ${resolvedTheme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
-                  Embarking on a stellar journey in web development, crafting responsive and 
-                  dynamic applications using Next.js. Contributing to innovative projects that 
-                  push the boundaries of user experience and technical excellence.
-                </p>
+                <ul className={`text-base leading-relaxed mb-6 space-y-2 ${resolvedTheme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
+                  <li>Led migration of a production EMS platform from Create React App to Next.js, enabling Server-Side Rendering, improving SEO, and reducing page load time by 30%.</li>
+                   <li>Engineered reusable UI components and optimized rendering pipelines using React memoization and lazy loading, achieving a Lighthouse performance score improvement from 72 to 89.</li>
+                </ul>
               </motion.div>
             </div>
 
