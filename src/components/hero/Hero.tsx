@@ -15,15 +15,14 @@ export function Hero() {
           <Button size="lg" className="font-semibold uppercase tracking-wider text-xs">See Projects</Button>
         </div>
       </div>
-      <div className="p-12 border-l hidden md:flex items-center justify-center bg-muted/20">
+      <div className="p-12 border-l hidden md:flex items-center justify-center">
         <div className="relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-foreground/10 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
           <Image
             src="/picture.jpg"
             alt="Profile Picture"
             width={300}
             height={400}
-            className="relative object-cover shadow-2xl border"
+            className="relative object-cover"
             loading="eager"
           />
         </div>
