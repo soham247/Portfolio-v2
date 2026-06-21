@@ -15,8 +15,8 @@ export function Navbar() {
       <NavLinks />
 
       <div className="flex items-center gap-4">
-        <Button size="sm" className="font-medium">
-          Contact Me
+        <Button size="sm" className="font-medium" asChild>
+          <Link href="mailto:sohamsadhukhan247@gmail.com">Contact Me</Link>
         </Button>
       </div>
     </nav>

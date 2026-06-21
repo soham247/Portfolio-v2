@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "Soham Sadhukhan",
     images: [
       {
-        url: "/profile.webp",
+        url: "/picture.webp",
         width: 300,
         height: 400,
         alt: "Soham Sadhukhan — Full Stack Developer",
@@ -81,7 +81,7 @@ const jsonLd = {
   "@type": "Person",
   name: "Soham Sadhukhan",
   jobTitle: "Full Stack Developer",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://soham-portfolio.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sohamsadhukhan.vercel.app",
   worksFor: {
     "@type": "Organization",
     name: "Quantum Heaps",

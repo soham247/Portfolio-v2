@@ -52,7 +52,7 @@ export function Footer() {
       <nav aria-label="Social links" className="flex flex-wrap justify-center">
         {socialLinks.map(({ label, href, Icon, isEmail }) => (
           <Tooltip key={label}>
-            <TooltipTrigger>
+            <TooltipTrigger asChild>
               <Link
                 href={href}
                 target={isEmail ? undefined : "_blank"}

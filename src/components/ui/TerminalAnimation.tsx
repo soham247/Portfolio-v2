@@ -6,13 +6,7 @@ import { FiTerminal } from "react-icons/fi";
 
 export function TerminalAnimation() {
   const pathname = usePathname();
-  const [prevPathname, setPrevPathname] = useState(pathname);
   const [terminalText, setTerminalText] = useState<string[]>([]);
-
-  if (pathname !== prevPathname) {
-    setPrevPathname(pathname);
-    setTerminalText([]);
-  }
 
   useEffect(() => {
     const lines = [
@@ -29,7 +23,7 @@ export function TerminalAnimation() {
     ];
 
     let timer: ReturnType<typeof setTimeout>;
-    let currentLineIndex = 0;
+    let currentLineIndex = 1;
 
     const typeNextLine = () => {
       if (currentLineIndex < lines.length) {
@@ -40,7 +34,10 @@ export function TerminalAnimation() {
       }
     };
 
-    timer = setTimeout(typeNextLine, 100);
+    timer = setTimeout(() => {
+      setTerminalText([lines[0]]);
+      timer = setTimeout(typeNextLine, 180);
+    }, 0);
     return () => clearTimeout(timer);
   }, [pathname]);
 
