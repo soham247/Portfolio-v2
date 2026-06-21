@@ -1,97 +1,82 @@
-"use client";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { HyperText } from "@/components/magicui/hyper-text";
-import Section from "@/components/Section";
-import { useThemeStyles } from "@/hooks/useThemeStyles";
+import BackButton from "@/components/ui/BackButton";
+import { skillCategories } from "@/data/skills";
+import type { Metadata } from "next";
 
-interface Skill {
-  name: string;
-  icon?: string;
-}
+export const metadata: Metadata = {
+  title: "Skills",
+  description:
+    "Technical skills and tools of Soham Sadhukhan — languages, frameworks, databases, AI tools, and developer tooling.",
+};
 
-function SkillsSection() {
-  const { textColor, cardBg, cardBorder } = useThemeStyles();
-  const [mounted, setMounted] = useState(false);
-
-  // Categorize skills
-  const skillCategories: Record<string, Skill[]> = {
-    "Frontend Frameworks": [
-      { name: "Next JS", icon: "devicon-nextjs-plain" },
-      { name: "React", icon: "devicon-react-original colored" },
-      { name: "Tailwind CSS", icon: "devicon-tailwindcss-original colored" },
-      { name: "CSS", icon: "devicon-css3-plain colored" },
-      { name: "HTML", icon: "devicon-html5-plain colored" },
-    ],
-    "Backend Technologies": [
-      { name: "Node JS", icon: "devicon-nodejs-plain-wordmark colored" },
-      { name: "Express JS", icon: "devicon-express-original" },
-    ],
-    "Databases": [
-      { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
-      { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
-    ],
-    Languages: [
-      { name: "TypeScript", icon: "devicon-typescript-plain colored" },
-      { name: "JavaScript", icon: "devicon-javascript-plain colored" },
-      { name: "Python", icon: "devicon-python-plain colored" },
-    ],
-    "Tools & Technologies": [
-      { name: "Git", icon: "devicon-git-plain colored" },
-      { name: "Docker", icon: "devicon-docker-plain colored" },
-      { name: "VS Code", icon: "devicon-vscode-plain colored" },
-      { name: "Figma", icon: "devicon-figma-plain colored" },
-    ],
-  };
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
+export default function SkillsPage() {
   return (
-    <Section 
-      id="skills"
-      title="My Skills"
-      subtitle="A collection of technologies and tools I've worked with"
-      particleQuantity={100}
-    >
-      {/* Skills categories */}
-      <div className="space-y-16">
-        {Object.entries(skillCategories).map(([category, categorySkills], index) => (
-          <motion.div
-            key={category}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="mb-8"
+    <div className="w-full min-h-screen px-12 py-16 flex flex-col gap-12">
+      {/* Header */}
+      <div className="flex flex-col gap-4">
+        <BackButton />
+
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b pb-8 gap-4">
+          <div>
+            <p className="text-sm font-mono text-primary mb-2" aria-hidden="true">
+              03. Stack &amp; Tools
+            </p>
+            <h1 className="text-4xl font-bold tracking-tight">Technical Stack Portal</h1>
+          </div>
+          <p className="text-sm font-mono max-w-md text-foreground/80">
+            An inventory of technologies, platforms, and methodologies I leverage
+            to design, engineer, and deploy high-performance applications.
+          </p>
+        </div>
+      </div>
+
+      {/* Categories */}
+      <div className="flex flex-col gap-16">
+        {skillCategories.map((category, catIdx) => (
+          <div
+            key={category.name}
+            className="flex flex-col lg:grid lg:grid-cols-4 gap-8 border-b pb-12 last:border-0 last:pb-0"
           >
-            <HyperText className={`text-2xl md:text-3xl font-bold mb-8 ${textColor}`}>
-              {category}
-            </HyperText>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {categorySkills.map(skill => {
+            {/* Category intro */}
+            <div className="lg:col-span-1 flex flex-col gap-3">
+              <span className="text-xs font-mono text-primary" aria-hidden="true">
+                03.{catIdx + 1}
+              </span>
+              <h2 className="text-xl font-bold">{category.name}</h2>
+              <p className="text-xs text-foreground/75 font-mono leading-relaxed">
+                {category.description}
+              </p>
+              <div className="mt-2">
+                <span className="text-[10px] font-mono bg-muted/60 px-2 py-1 text-foreground border border-border/60">
+                  {category.skills.length} Items
+                </span>
+              </div>
+            </div>
+
+            {/* Skills grid */}
+            <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+              {category.skills.map((skill) => {
+                const SkillIcon = skill.Icon;
                 return (
-                  <motion.div
+                  <div
                     key={skill.name}
-                    whileHover={{ scale: 1.05 }}
-                    className={`rounded-lg border ${cardBorder} ${cardBg} p-4 flex flex-col items-center justify-center shadow-md hover:shadow-lg transition-all duration-300`}
+                    className="group aspect-square flex flex-col items-center justify-center gap-4 p-4 border border-border bg-card/25 transition-all duration-300 hover:border-foreground/40 hover:bg-muted/15"
                   >
-                    {skill.icon && (
-                      <i className={`${skill.icon} text-4xl md:text-5xl mb-3`}></i>
-                    )}
-                    <p className={`text-sm font-medium text-center ${textColor}`}>{skill.name}</p>
-                  </motion.div>
+                    <div
+                      className={`text-5xl text-foreground transition-all duration-300 group-hover:scale-110 ${skill.colorClass}`}
+                      aria-hidden="true"
+                    >
+                      <SkillIcon />
+                    </div>
+                    <span className="text-[11px] font-mono font-medium text-center text-foreground/80 group-hover:text-foreground transition-colors duration-300">
+                      {skill.name}
+                    </span>
+                  </div>
                 );
               })}
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
-    </Section>
+    </div>
   );
 }
-
-export default SkillsSection;
