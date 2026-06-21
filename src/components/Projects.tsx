@@ -1,38 +1,14 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-
-interface Project {
-  title: string;
-  image: string;
-  liveUrl: string;
-  githubUrl: string;
-  description: string;
-  tags: string[];
-}
-
-const projects: Project[] = [
-  {
-    title: "Jeevan Verse",
-    image: "https://res.cloudinary.com/dbafirupc/image/upload/v1774750130/jeevanverse_bjwqry.png",
-    liveUrl: "https://jeevan-verse.vercel.app/",
-    githubUrl: "https://github.com/Dutta2005/Jeevan-verse",
-    description: "Find symptoms, request blood, join discussions, and support health campaigns—all in one place.",
-    tags: ["MERN", "Socket.io", "Tailwind"],
-  },
-  {
-    title: "Learntrix",
-    image: "https://res.cloudinary.com/dbafirupc/image/upload/v1774750280/Screenshot_2026-03-29_074059_xthpyf.png",
-    liveUrl: "https://learntrix-ai.vercel.app/",
-    githubUrl: "https://github.com/soham247/learntrix-ai",
-    description: "Transform YouTube videos and PDF documents into interactive flashcards, responsive quizzes, and intelligent chat assistants.",
-    tags: ["Next.js", "FastAPI", "Gemini", "Supabase"],
-  },
-];
+import { projects } from "@/data/projects";
 
 export function Projects() {
   return (
-    <div id="projects" className="col-span-1 md:col-span-2 px-12 py-24 border-t md:border-t-0 md:border-l border-border flex flex-col justify-between scroll-mt-16 bg-background">
+    <div
+      id="projects"
+      className="col-span-1 md:col-span-2 px-12 py-24 border-t md:border-t-0 md:border-l border-border flex flex-col justify-between scroll-mt-16 bg-background"
+    >
       <div>
         <div className="mb-12">
           <h2 className="text-sm font-mono text-primary mb-2">02. Selected Work</h2>
@@ -47,19 +23,19 @@ export function Projects() {
             >
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  {/* Image Container (16:9 ratio) */}
-                  <div className="relative w-full aspect-[16/9] overflow-hidden bg-muted border-b border-border">
+                  {/* Image container (16:9 ratio) */}
+                  <div className="relative w-full aspect-video overflow-hidden bg-muted border-b border-border">
                     <Image
                       src={project.image}
-                      alt={`${project.title} Screenshot`}
+                      alt={`${project.title} screenshot`}
                       fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                       className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                       loading="lazy"
                     />
                   </div>
 
-                  {/* Padded Content Area */}
+                  {/* Content */}
                   <div className="p-4 flex flex-col">
                     {/* Tags */}
                     <div className="flex flex-wrap gap-1.5 mb-3">
@@ -83,28 +59,40 @@ export function Projects() {
                   </div>
                 </div>
 
-                {/* Action Links/Buttons */}
+                {/* Action buttons */}
                 <div className="px-5 pb-5 pt-0 mt-auto">
                   <div className="flex gap-3">
-                    <Button asChild size="sm" variant="default" className="flex-1 font-semibold text-[11px] h-8 rounded-none">
+                    <Button
+                      asChild
+                      size="sm"
+                      variant="default"
+                      className="flex-1 font-semibold text-[11px] h-8 rounded-none"
+                    >
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-1.5"
+                        aria-label={`Live demo for ${project.title}`}
                       >
-                        <FaExternalLinkAlt className="size-2.5" />
+                        <FaExternalLinkAlt className="size-2.5" aria-hidden="true" />
                         <span>Live Demo</span>
                       </a>
                     </Button>
-                    <Button asChild size="sm" variant="outline" className="flex-1 font-semibold text-[11px] h-8 rounded-none">
+                    <Button
+                      asChild
+                      size="sm"
+                      variant="outline"
+                      className="flex-1 font-semibold text-[11px] h-8 rounded-none"
+                    >
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-center gap-1.5"
+                        aria-label={`GitHub repository for ${project.title}`}
                       >
-                        <FaGithub className="size-3" />
+                        <FaGithub className="size-3" aria-hidden="true" />
                         <span>GitHub</span>
                       </a>
                     </Button>

@@ -8,7 +8,7 @@ export default function Home() {
     <div className="w-full">
       <Hero />
       <About />
-      <div className="grid grid-cols-1 md:grid-cols-3 border-b scroll-mt-16 bg-muted/5">
+      <div className="grid grid-cols-1 md:grid-cols-3 border-b bg-muted/5">
         <Skills />
         <Projects />
       </div>
