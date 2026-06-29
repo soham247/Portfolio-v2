@@ -5,12 +5,12 @@ export function Hero() {
   return (
     <section id="home" className="grid md:grid-cols-3 border-b scroll-mt-16">
       {/* Left column */}
-      <div className="col-span-2 px-12 py-24 flex flex-col justify-center">
+      <div className="col-span-2 px-5 py-12 sm:px-8 sm:py-16 md:px-12 md:py-24 flex flex-col justify-center">
         <p className="text-2xl font-mono text-primary mb-4" aria-hidden="true">
           01. Hello, I&apos;m
         </p>
 
-        <h1 className="text-7xl font-bold mb-4 tracking-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 tracking-tight">
           Soham Sadhukhan
         </h1>
 

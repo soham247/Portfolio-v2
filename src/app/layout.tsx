@@ -110,7 +110,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="flex flex-col px-20 min-h-screen bg-background">
+      <body className="flex flex-col px-0 sm:px-4 md:px-8 lg:px-12 xl:px-20 min-h-screen bg-background">
         <TooltipProvider>
           <div className="flex flex-col flex-1 border-x relative">
             <Navbar />

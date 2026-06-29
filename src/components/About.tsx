@@ -5,7 +5,7 @@ export function About() {
   return (
     <section className="grid grid-cols-1 md:grid-cols-3 border-b bg-background">
       {/* Left Column: Title and Intro (1/3 width) */}
-      <div className="py-4 px-8 border-b md:border-b-0 md:border-r border-border flex flex-col justify-center bg-muted/5">
+      <div className="py-4 px-5 sm:px-6 md:px-8 border-b md:border-b-0 md:border-r border-border flex flex-col justify-center bg-muted/5">
         <div>
           <h2 className="text-sm font-mono text-primary mb-1.5">01.5 Overview</h2>
           <h3 className="text-4xl font-bold mb-3 tracking-tight">Profile</h3>
@@ -16,7 +16,7 @@ export function About() {
       </div>
 
       {/* Middle Column: SDE Internship (1/3 width) */}
-      <div className="py-4 px-8 border-b md:border-b-0 md:border-r border-border flex flex-col justify-center group cursor-default">
+      <div className="py-4 px-5 sm:px-6 md:px-8 border-b md:border-b-0 md:border-r border-border flex flex-col justify-center group cursor-default">
         <span className="text-[10px] font-mono uppercase tracking-widest text-primary mb-2 block">
           Currently Working
         </span>
@@ -33,7 +33,7 @@ export function About() {
       {/* Right Column: Achievements & Open Source (1/3 width, split vertically into 3 rows) */}
       <div className="grid grid-rows-3">
         {/* Top: Based in */}
-        <div className="py-4 px-8 border-b border-border flex flex-col justify-center group cursor-default bg-background">
+        <div className="py-4 px-5 sm:px-6 md:px-8 border-b border-border flex flex-col justify-center group cursor-default bg-background">
           <span className="text-[10px] font-mono uppercase tracking-widest text-primary mb-2 block">
             Based in
           </span>
@@ -46,7 +46,7 @@ export function About() {
         </div>
 
         {/* Bottom: Achievements */}
-        <div className="py-4 px-8 row-span-2 flex flex-col justify-center group cursor-default bg-background">
+        <div className="py-4 px-5 sm:px-6 md:px-8 row-span-2 flex flex-col justify-center group cursor-default bg-background">
           <span className="text-[10px] font-mono uppercase tracking-widest text-primary mb-2 block">
             Achievements
           </span>

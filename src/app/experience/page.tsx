@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ExperiencePage() {
     return (
-        <div className="w-full min-h-screen px-12 py-16">
+        <div className="w-full min-h-screen px-5 py-8 sm:px-8 sm:py-12 md:px-12 md:py-16">
             <BackButton />
             <Experience />
         </div>

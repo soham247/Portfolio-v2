@@ -7,7 +7,7 @@ export function Projects() {
   return (
     <div
       id="projects"
-      className="col-span-1 md:col-span-2 px-12 py-24 border-t md:border-t-0 md:border-l border-border flex flex-col justify-between scroll-mt-16 bg-background"
+      className="col-span-1 md:col-span-2 px-5 py-12 sm:px-8 sm:py-16 md:px-12 md:py-24 border-t md:border-t-0 md:border-l border-border flex flex-col justify-between scroll-mt-16 bg-background"
     >
       <div>
         <div className="mb-12">

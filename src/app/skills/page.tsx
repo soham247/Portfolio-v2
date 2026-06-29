@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function SkillsPage() {
   return (
-    <div className="w-full min-h-screen px-12 py-16 flex flex-col gap-12">
+    <div className="w-full min-h-screen px-5 py-8 sm:px-8 sm:py-12 md:px-12 md:py-16 flex flex-col gap-12">
       {/* Header */}
       <div className="flex flex-col gap-4">
         <BackButton />

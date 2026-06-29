@@ -6,7 +6,7 @@ export function Skills() {
   return (
     <div
       id="skills"
-      className="col-span-1 p-12 md:py-24 md:px-12 flex flex-col justify-between bg-background"
+      className="col-span-1 p-5 sm:p-8 md:py-24 md:px-12 flex flex-col justify-between bg-background"
     >
       <div className="flex flex-col h-fit">
         <div className="mb-12">
