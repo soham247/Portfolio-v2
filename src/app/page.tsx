@@ -1,7 +1,18 @@
+import dynamic from "next/dynamic";
 import { Hero } from "@/components/hero/Hero";
-import { About } from "@/components/About";
-import { Projects } from "@/components/Projects";
-import { Skills } from "@/components/Skills";
+import { LoadingFallback } from "@/components/ui/LoadingFallback";
+
+const About = dynamic(() => import("@/components/About").then((mod) => mod.About), {
+  loading: () => <LoadingFallback moduleName="about" />,
+});
+
+const Skills = dynamic(() => import("@/components/Skills").then((mod) => mod.Skills), {
+  loading: () => <LoadingFallback moduleName="skills" />,
+});
+
+const Projects = dynamic(() => import("@/components/Projects").then((mod) => mod.Projects), {
+  loading: () => <LoadingFallback moduleName="projects" />,
+});
 
 export default function Home() {
   return (
@@ -15,5 +26,6 @@ export default function Home() {
     </div>
   );
 }
+
 
 
