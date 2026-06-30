@@ -30,7 +30,7 @@ export function Skills() {
                   return (
                     <div
                       key={skill.name}
-                      className="flex items-center gap-1.5 px-2.5 py-1 border border-border/80 bg-muted/20 text-xs font-mono text-foreground/80 hover:text-foreground hover:border-foreground/50 transition-all duration-200 group/skill cursor-default"
+                      className="flex items-center gap-1.5 px-2.5 py-1 border border-border/80 bg-muted/20 text-xs font-mono text-text-secondary hover:text-foreground hover:border-foreground/50 transition-all duration-200 group/skill cursor-default"
                     >
                       <Icon
                         className={`size-3.5 transition-all duration-200 ${skill.colorClass}`}

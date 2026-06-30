@@ -6,7 +6,7 @@ export default function Loading() {
           <span>SYSTEM_LOAD</span>
           <span className="animate-pulse size-1.5 rounded-full bg-primary" />
         </div>
-        <div className="flex items-center gap-1.5 text-foreground/80">
+        <div className="flex items-center gap-1.5 text-text-secondary">
           <span className="text-primary font-semibold select-none animate-pulse">&gt;</span>
           <span>fetching resources...</span>
         </div>

@@ -53,7 +53,7 @@ export function Projects() {
                     <h4 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                       {project.title}
                     </h4>
-                    <p className="text-sm text-foreground/70 mb-2 leading-relaxed">
+                    <p className="text-sm text-text-secondary mb-2 leading-relaxed">
                       {project.description}
                     </p>
                   </div>

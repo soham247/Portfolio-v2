@@ -28,7 +28,7 @@ export function MobileNav() {
               className={`flex flex-col items-center justify-center gap-0.5 pt-1 pb-2 px-2.5 rounded-full transition-all duration-300 relative group ${
                 isActive
                   ? "text-primary scale-105"
-                  : "text-foreground/60 hover:text-foreground"
+                  : "text-text-tertiary hover:text-foreground"
               }`}
             >
               <div className={`p-1.5 rounded-full transition-all duration-300 ${

@@ -24,13 +24,13 @@ export function NavLinks() {
             href={link.href}
             className={`flex items-center gap-1.5 pr-2 text-xs font-semibold transition-colors duration-200 relative h-full group ${isActive
                 ? "text-foreground font-bold"
-                : "text-foreground/65 hover:text-foreground"
+                : "text-text-tertiary hover:text-foreground"
               }`}
           >
             <span
               className={`text-[9px] font-mono transition-colors ${isActive
                   ? "text-primary font-bold"
-                  : "text-foreground/45 group-hover:text-foreground/75"
+                  : "text-text-tertiary group-hover:text-text-secondary"
                 }`}
             >
               0{idx + 1}.

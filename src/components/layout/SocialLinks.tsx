@@ -52,7 +52,7 @@ export function SocialLinks() {
             href={href}
             target={isEmail ? undefined : "_blank"}
             rel={isEmail ? undefined : "noopener noreferrer"}
-            className="p-3 rounded-xl hover:bg-muted/80 transition-all text-foreground/70 hover:text-foreground active:scale-95 flex items-center justify-center"
+            className="p-3 rounded-xl hover:bg-muted/80 transition-all text-text-secondary hover:text-foreground active:scale-95 flex items-center justify-center"
             aria-label={label}
           >
             <Icon className="w-4 h-4" aria-hidden="true" />

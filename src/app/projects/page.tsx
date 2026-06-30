@@ -16,7 +16,7 @@ export default function ProjectsPage() {
                 <BackButton />
 
                 <div className="flex flex-col md:flex-row md:items-end justify-between border-b pb-8 gap-4">
-                    <p className="text-sm font-mono max-w-md text-foreground/80">
+                    <p className="text-sm font-mono max-w-md text-text-secondary">
                         Coming Soon...
                     </p>
                 </div>

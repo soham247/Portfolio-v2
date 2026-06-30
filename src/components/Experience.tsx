@@ -43,7 +43,7 @@ export function Experience() {
               </div>
               <h5 className="text-sm text-primary mb-3">{entry.company}</h5>
               {entry.bullets && (
-                <ul className="list-disc pl-4 space-y-2 text-sm text-foreground/70">
+                <ul className="list-disc pl-4 space-y-2 text-sm text-text-secondary">
                   {entry.bullets.map((bullet, bIdx) => (
                     <li key={bIdx}>{bullet}</li>
                   ))}

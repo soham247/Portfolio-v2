@@ -22,7 +22,7 @@ export default function SkillsPage() {
             </p>
             <h1 className="text-4xl font-bold tracking-tight">Technical Stack Portal</h1>
           </div>
-          <p className="text-sm font-mono max-w-md text-foreground/80">
+          <p className="text-sm font-mono max-w-md text-text-secondary">
             An inventory of technologies, platforms, and methodologies I leverage
             to design, engineer, and deploy high-performance applications.
           </p>
@@ -42,7 +42,7 @@ export default function SkillsPage() {
                 03.{catIdx + 1}
               </span>
               <h2 className="text-xl font-bold">{category.name}</h2>
-              <p className="text-xs text-foreground/75 font-mono leading-relaxed">
+              <p className="text-xs text-text-secondary font-mono leading-relaxed">
                 {category.description}
               </p>
               <div className="mt-2">
@@ -67,7 +67,7 @@ export default function SkillsPage() {
                     >
                       <SkillIcon />
                     </div>
-                    <span className="text-[11px] font-mono font-medium text-center text-foreground/80 group-hover:text-foreground transition-colors duration-300">
+                    <span className="text-[11px] font-mono font-medium text-center text-text-secondary group-hover:text-foreground transition-colors duration-300">
                       {skill.name}
                     </span>
                   </div>

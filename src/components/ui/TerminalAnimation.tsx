@@ -58,7 +58,7 @@ export function TerminalAnimation() {
       </div>
 
       {/* Terminal Logs Content */}
-      <div className="p-5 flex-1 flex flex-col gap-2 font-mono text-foreground/80 leading-relaxed overflow-y-auto">
+      <div className="p-5 flex-1 flex flex-col gap-2 font-mono text-text-secondary leading-relaxed overflow-y-auto">
         {terminalText.map((line, index) => {
           if (!line) return null;
           const isCommand = line.startsWith("guest@soham");

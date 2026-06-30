@@ -14,11 +14,11 @@ export function Hero() {
           Soham Sadhukhan
         </h1>
 
-        <h2 className="text-4xl font-semibold text-foreground/75 mb-6">
+        <h2 className="text-4xl font-semibold text-text-secondary mb-6">
           Full Stack Developer
         </h2>
 
-        <p className="text-foreground/70 max-w-xl text-base mb-8 leading-relaxed">
+        <p className="text-text-secondary max-w-xl text-base mb-8 leading-relaxed">
           I develop visually stunning and highly functional products that elevate
           brands and create seamless digital experiences. Specializing in
           Next.js, React, Node.js, and modern CSS/Tailwind design systems.

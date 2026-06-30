@@ -9,7 +9,7 @@ export function About() {
         <div>
           <h2 className="text-sm font-mono text-primary mb-1.5">01.5 Overview</h2>
           <h3 className="text-4xl font-bold mb-3 tracking-tight">Profile</h3>
-          <p className="text-sm text-foreground/75 leading-relaxed">
+          <p className="text-sm text-text-secondary leading-relaxed">
             A snapshot of my current software engineering internship, hackathon results, and contributions to the developer community.
           </p>
         </div>
@@ -24,7 +24,7 @@ export function About() {
           SDE Intern
         </h4>
         <div className="flex items-baseline gap-2.5 mt-2">
-          <span className="text-xl font-medium text-foreground/80">Quantum Heaps</span>
+          <span className="text-xl font-medium text-text-secondary">Quantum Heaps</span>
           <span className="text-border text-2xl">|</span>
           <span className="text-sm font-mono text-primary/80">June — Present</span>
         </div>
@@ -39,7 +39,7 @@ export function About() {
           </span>
           <div className="flex items-center gap-3 group/item">
             <FiMapPin className="size-5 text-primary shrink-0 transition-transform duration-300 group-hover/item:scale-110" />
-            <h4 className="text-base font-semibold tracking-tight text-foreground/90 group-hover/item:text-primary transition-colors duration-200">
+            <h4 className="text-base font-semibold tracking-tight text-foreground group-hover/item:text-primary transition-colors duration-200">
               West Bengal, <span className="text-xl font-bold">INDIA</span>
             </h4>
           </div>
@@ -53,13 +53,13 @@ export function About() {
           <div className="space-y-3">
             <div className="flex items-center gap-3 group/item">
               <FaTrophy className="size-5 text-primary shrink-0 transition-transform duration-300 group-hover/item:scale-110" />
-              <h4 className="text-base font-semibold tracking-tight text-foreground/90 group-hover/item:text-primary transition-colors duration-200">
+              <h4 className="text-base font-semibold tracking-tight text-foreground group-hover/item:text-primary transition-colors duration-200">
                 Winner of Hackwars 2025
               </h4>
             </div>
             <div className="flex items-center gap-3 group/item">
               <FiGitBranch className="size-5 text-primary shrink-0 transition-transform duration-300 group-hover/item:scale-110 group-hover/item:rotate-12" />
-              <h4 className="text-base font-semibold tracking-tight text-foreground/90 group-hover/item:text-primary transition-colors duration-200">
+              <h4 className="text-base font-semibold tracking-tight text-foreground group-hover/item:text-primary transition-colors duration-200">
                 Open Source Contributor
               </h4>
             </div>
